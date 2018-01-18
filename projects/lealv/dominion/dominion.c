@@ -711,7 +711,7 @@ void great_hall_effect(struct gameState *state, int handPos)
 	drawCard(currentPlayer, state);
 
 	//+1 Actions
-	//state->numActions++; BUG: comment out this line.
+	state->numActions++;
 
 	//discard card from hand
 	discardCard(handPos, currentPlayer, state, 0);
