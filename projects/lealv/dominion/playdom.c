@@ -38,10 +38,12 @@ int main (int argc, char** argv) {
     }
 
     if (whoseTurn(&G) == 0) {
+		printf("discard pile count for %d: %d\n", whoseTurn(&G), G.discardCount[whoseTurn(&G)]);
       if (smithyPos != -1) {
         printf("0: smithy played from position %d\n", smithyPos);
         playCard(smithyPos, -1, -1, -1, &G);
         printf("smithy played.\n");
+		printf("discard pile count for %d: %d\n", whoseTurn(&G), G.discardCount[whoseTurn(&G)]);
         money = 0;
         i=0;
         while(i<numHandCards(&G)){
@@ -80,6 +82,7 @@ int main (int argc, char** argv) {
       }
 
       printf("0: end turn\n");
+	  printf("discard pile count for %d: %d\n", whoseTurn(&G), G.discardCount[whoseTurn(&G)]);
       endTurn(&G);
     }
     else {
