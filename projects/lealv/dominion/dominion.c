@@ -115,7 +115,7 @@ int initializeGame(int numPlayers, int kingdomCards[10], int randomSeed,
 		  if (numPlayers == 2){ 
 		    state->supplyCount[i] = 8; 
 		  }
-		  else{ state->supplyCount[i] = 12; }
+		  else{ state->supplyCount[i] = 12;}
 		}
 	      else
 		{
@@ -207,7 +207,10 @@ int shuffle(int player, struct gameState *state) {
   int i;
 
   if (state->deckCount[player] < 1)
-    return -1;
+  {
+	  return -1;
+  }
+
   qsort ((void*)(state->deck[player]), state->deckCount[player], sizeof(int), compare); 
   /* SORT CARDS IN DECK TO ENSURE DETERMINISM! */
 
@@ -653,7 +656,7 @@ void adventurer_effect(struct gameState *state, int handPos)
 
 	while (drawntreasure<2) {
 		if (state->deckCount[currentPlayer] <1) {//if the deck is empty we need to shuffle discard and add to deck
-			shuffle(currentPlayer, state);
+			shuffle(currentPlayer, state); //This does nothing. Tries to shuffle an empty deck.
 		}
 		drawCard(currentPlayer, state);
 		cardDrawn = state->hand[currentPlayer][state->handCount[currentPlayer] - 1];//top card of hand is most recently drawn card.
@@ -672,6 +675,7 @@ void adventurer_effect(struct gameState *state, int handPos)
 	}
 
 	//discard adventurer card?
+	//discardCard(handPos, currentPlayer, state, 0);
 }
 
 void smithy_effect(struct gameState *state, int handPos)
@@ -756,9 +760,9 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
 
   int tributeRevealedCards[2] = {-1, -1};
   int temphand[MAX_HAND];// moved above the if statement
-  int drawntreasure=0;
-  int cardDrawn;
-  int z = 0;// this is the counter for the temp hand
+  //int drawntreasure=0;
+  //int cardDrawn;
+  //int z = 0;// this is the counter for the temp hand
   if (nextPlayer > (state->numPlayers - 1)){
     nextPlayer = 0;
   }
