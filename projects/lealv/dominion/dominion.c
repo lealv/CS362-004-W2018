@@ -526,10 +526,12 @@ int getWinners(int players[MAX_PLAYERS], struct gameState *state) {
 }
 
 int drawCard(int player, struct gameState *state)
-{	int count;
+{	
+	//printf("inside drawCard\n");
+	int count;
   int deckCounter;
   if (state->deckCount[player] <= 0){//Deck is empty
-    
+	  //printf("deck is empty\n");
     //Step 1 Shuffle the discard pile back into a deck
     int i;
     //Move discard to deck
@@ -1273,7 +1275,6 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
 
 int discardCard(int handPos, int currentPlayer, struct gameState *state, int trashFlag)
 {
-	
   //if card is not trashed, added to Played pile 
   if (trashFlag < 1)
     {
@@ -1305,7 +1306,6 @@ int discardCard(int handPos, int currentPlayer, struct gameState *state, int tra
       //reduce number of cards in hand
       state->handCount[currentPlayer]--;
     }
-	
   return 0;
 }
 
