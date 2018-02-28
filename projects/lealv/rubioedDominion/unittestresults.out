@@ -1,0 +1,701 @@
+Result for running Dominion function and card tests:
+unittest1.c:
+----------------- Testing Function: getCost() ----------------
+Card 0: cost = 0, expected = 0
+Card 1: cost = 2, expected = 2
+Card 2: cost = 5, expected = 5
+Card 3: cost = 8, expected = 8
+Card 4: cost = 0, expected = 0
+Card 5: cost = 3, expected = 3
+Card 6: cost = 6, expected = 6
+Card 7: cost = 6, expected = 6
+Card 8: cost = 5, expected = 5
+Card 9: cost = 4, expected = 4
+Card 10: cost = 4, expected = 4
+Card 11: cost = 5, expected = 5
+Card 12: cost = 4, expected = 4
+Card 13: cost = 4, expected = 4
+Card 14: cost = 3, expected = 3
+Card 15: cost = 4, expected = 4
+Card 16: cost = 3, expected = 3
+Card 17: cost = 5, expected = 5
+Card 18: cost = 3, expected = 3
+Card 19: cost = 5, expected = 5
+Card 20: cost = 3, expected = 3
+Card 21: cost = 4, expected = 4
+Card 22: cost = 2, expected = 2
+Card 23: cost = 5, expected = 5
+Card 24: cost = 4, expected = 4
+Card 25: cost = 4, expected = 4
+Card 26: cost = 4, expected = 4
+Card -1(invalid): return value = -1, expected = -1
+
+ >>>>> SUCCESS: Testing complete getCost() <<<<<
+
+File 'dominion.c'
+Lines executed:5.32% of 564
+Branches executed:6.75% of 415
+Taken at least once:6.75% of 415
+Calls executed:0.00% of 94
+Creating 'dominion.c.gcov'
+
+unittest2.c:
+----------------- Testing Function: isGameOver() ----------------
+----TEST 1: province pile is empty:----
+Province empty and 0/16 other pile(s) empty: gameOver = 1, expected = 1
+Province empty and 1/16 other pile(s) empty: gameOver = 1, expected = 1
+Province empty and 2/16 other pile(s) empty: gameOver = 1, expected = 1
+Province empty and 3/16 other pile(s) empty: gameOver = 1, expected = 1
+Province empty and 4/16 other pile(s) empty: gameOver = 1, expected = 1
+Province empty and 5/16 other pile(s) empty: gameOver = 1, expected = 1
+Province empty and 6/16 other pile(s) empty: gameOver = 1, expected = 1
+Province empty and 7/16 other pile(s) empty: gameOver = 1, expected = 1
+Province empty and 8/16 other pile(s) empty: gameOver = 1, expected = 1
+Province empty and 9/16 other pile(s) empty: gameOver = 1, expected = 1
+Province empty and 10/16 other pile(s) empty: gameOver = 1, expected = 1
+Province empty and 11/16 other pile(s) empty: gameOver = 1, expected = 1
+Province empty and 12/16 other pile(s) empty: gameOver = 1, expected = 1
+Province empty and 13/16 other pile(s) empty: gameOver = 1, expected = 1
+Province empty and 14/16 other pile(s) empty: gameOver = 1, expected = 1
+Province empty and 15/16 other pile(s) empty: gameOver = 1, expected = 1
+Province empty and 16/16 other pile(s) empty: gameOver = 1, expected = 1
+----TEST 2: province pile is NOT empty:----
+Province NOT empty and 0/16 other pile(s) empty: gameOver = 0, expected = 0
+Province NOT empty and 1/16 other pile(s) empty: gameOver = 0, expected = 0
+Province NOT empty and 2/16 other pile(s) empty: gameOver = 0, expected = 0
+Province NOT empty and 3/16 other pile(s) empty: gameOver = 1, expected = 1
+Province NOT empty and 4/16 other pile(s) empty: gameOver = 1, expected = 1
+Province NOT empty and 5/16 other pile(s) empty: gameOver = 1, expected = 1
+Province NOT empty and 6/16 other pile(s) empty: gameOver = 1, expected = 1
+Province NOT empty and 7/16 other pile(s) empty: gameOver = 1, expected = 1
+Province NOT empty and 8/16 other pile(s) empty: gameOver = 1, expected = 1
+Province NOT empty and 9/16 other pile(s) empty: gameOver = 1, expected = 1
+Province NOT empty and 10/16 other pile(s) empty: gameOver = 1, expected = 1
+Province NOT empty and 11/16 other pile(s) empty: gameOver = 1, expected = 1
+Province NOT empty and 12/16 other pile(s) empty: gameOver = 1, expected = 1
+Province NOT empty and 13/16 other pile(s) empty: gameOver = 1, expected = 1
+Province NOT empty and 14/16 other pile(s) empty: gameOver = 1, expected = 1
+Province NOT empty and 15/16 other pile(s) empty: gameOver = 1, expected = 1
+Province NOT empty and 16/16 other pile(s) empty: gameOver = 1, expected = 1
+
+ >>>>> SUCCESS: Testing complete isGameOver() <<<<<
+
+File 'dominion.c'
+Lines executed:22.52% of 564
+Branches executed:24.10% of 415
+Taken at least once:20.96% of 415
+Calls executed:7.45% of 94
+Creating 'dominion.c.gcov'
+
+unittest3.c:
+----------------- Testing Function: supplyCount() ----------------
+---TEST 1: supplyCount() returns correct value---
+Supply card 0: value returned = 10, expected = 10
+Supply card 1: value returned = 8, expected = 8
+Supply card 2: value returned = 8, expected = 8
+Supply card 3: value returned = 8, expected = 8
+Supply card 4: value returned = 46, expected = 46
+Supply card 5: value returned = 40, expected = 40
+Supply card 6: value returned = 30, expected = 30
+Supply card 7: value returned = 10, expected = 10
+Supply card 8: value returned = 10, expected = 10
+Supply card 9: value returned = -1, expected = -1
+Supply card 10: value returned = -1, expected = -1
+Supply card 11: value returned = 10, expected = 10
+Supply card 12: value returned = -1, expected = -1
+Supply card 13: value returned = 10, expected = 10
+Supply card 14: value returned = 10, expected = 10
+Supply card 15: value returned = -1, expected = -1
+Supply card 16: value returned = -1, expected = -1
+Supply card 17: value returned = 10, expected = 10
+Supply card 18: value returned = -1, expected = -1
+Supply card 19: value returned = 10, expected = 10
+Supply card 20: value returned = -1, expected = -1
+Supply card 21: value returned = 10, expected = 10
+Supply card 22: value returned = 10, expected = 10
+Supply card 23: value returned = -1, expected = -1
+Supply card 24: value returned = -1, expected = -1
+Supply card 25: value returned = 10, expected = 10
+Supply card 26: value returned = -1, expected = -1
+---TEST 2: No state change occured for either player---
+player 1 hand count = 5, expected = 5
+player 1 deck count = 5, expected = 5
+player 1 discard count = 0, expected = 0
+player 2 hand count = 0, expected = 0
+player 2 deck count = 10, expected = 10
+player 2 discard count = 0, expected = 0
+---TEST 3: No state change occured for any supply card---
+supply card 0: count = 10, expected: count = 10
+supply card 1: count = 8, expected: count = 8
+supply card 2: count = 8, expected: count = 8
+supply card 3: count = 8, expected: count = 8
+supply card 4: count = 46, expected: count = 46
+supply card 5: count = 40, expected: count = 40
+supply card 6: count = 30, expected: count = 30
+supply card 7: count = 10, expected: count = 10
+supply card 8: count = 10, expected: count = 10
+supply card 9: count = -1, expected: count = -1
+supply card 10: count = -1, expected: count = -1
+supply card 11: count = 10, expected: count = 10
+supply card 12: count = -1, expected: count = -1
+supply card 13: count = 10, expected: count = 10
+supply card 14: count = 10, expected: count = 10
+supply card 15: count = -1, expected: count = -1
+supply card 16: count = -1, expected: count = -1
+supply card 17: count = 10, expected: count = 10
+supply card 18: count = -1, expected: count = -1
+supply card 19: count = 10, expected: count = 10
+supply card 20: count = -1, expected: count = -1
+supply card 21: count = 10, expected: count = 10
+supply card 22: count = 10, expected: count = 10
+supply card 23: count = -1, expected: count = -1
+supply card 24: count = -1, expected: count = -1
+supply card 25: count = 10, expected: count = 10
+supply card 26: count = -1, expected: count = -1
+
+ >>>>> SUCCESS: Testing complete supplyCount() <<<<<
+
+File 'dominion.c'
+Lines executed:22.87% of 564
+Branches executed:24.10% of 415
+Taken at least once:20.96% of 415
+Calls executed:7.45% of 94
+Creating 'dominion.c.gcov'
+
+unittest4.c:
+----------------- Testing Function: gainCard() ----------------
+---TEST 1: Card pile is empty---
+gainCard() returned -1, expected -1
+supply card count = 0, expected 0
+discard pile count = 0, expected = 0
+hand count = 5, expected = 5
+deck count = 5, expected = 5
+---TEST 2: Card is not used in game---
+gainCard() returned -1, expected -1
+supply card count = -1, expected -1
+discard pile count = 0, expected = 0
+hand count = 5, expected = 5
+deck count = 5, expected = 5
+---TEST 3: Gain card to discard pile---
+gainCard() returned 0, expected 0
+supply card count = 9, expected 9
+discard pile count = 1, expected = 1
+discard pile top card = 7, expected = 7
+hand count = 5, expected = 5
+deck count = 5, expected = 5
+---TEST 4: Gain card to deck pile---
+gainCard() returned 0, expected 0
+supply card count = 9, expected 9
+discard pile count = 0, expected = 0
+hand count = 5, expected = 5
+deck count = 6, expected = 6
+deck top card = 7, expected = 7
+---TEST 5: Gain card to hand---
+gainCard() returned 0, expected 0
+supply card count = 9, expected 9
+discard pile count = 0, expected = 0
+hand count = 6, expected = 6
+hand top card = 7, expected = 7
+deck count = 5, expected = 5
+
+ >>>>> SUCCESS: Testing complete gainCard() <<<<<
+
+File 'dominion.c'
+Lines executed:25.18% of 564
+Branches executed:25.54% of 415
+Taken at least once:22.41% of 415
+Calls executed:8.51% of 94
+Creating 'dominion.c.gcov'
+
+cardtest1.c:
+----------------- Testing Card: smithy ----------------
+----TEST 1: +3 cards, > 3 cards in deck----
+hand count = 8, expected = 7
+***FAILED ASSERTION: 8 == 7***
+deck count = 1, expected = 2
+***FAILED ASSERTION: 1 == 2***
+coins = 4, expected = 4
+actions = 1, expected = 1
+---Checking that no state change occurs for other player---
+other player's hand count = 0, expected = 0
+other player's deck count = 10, expected = 10
+other player's discard count = 0, expected = 0
+----Checking that no state change has occured for supply cards (curse, treasure, victory, and kingdom cards)---
+supply card 0: count = 10, expected: count = 10
+supply card 1: count = 8, expected: count = 8
+supply card 2: count = 8, expected: count = 8
+supply card 3: count = 8, expected: count = 8
+supply card 4: count = 46, expected: count = 46
+supply card 5: count = 40, expected: count = 40
+supply card 6: count = 30, expected: count = 30
+supply card 7: count = 10, expected: count = 10
+supply card 8: count = 10, expected: count = 10
+supply card 9: count = -1, expected: count = -1
+supply card 10: count = -1, expected: count = -1
+supply card 11: count = 10, expected: count = 10
+supply card 12: count = -1, expected: count = -1
+supply card 13: count = 10, expected: count = 10
+supply card 14: count = 10, expected: count = 10
+supply card 15: count = -1, expected: count = -1
+supply card 16: count = -1, expected: count = -1
+supply card 17: count = 10, expected: count = 10
+supply card 18: count = -1, expected: count = -1
+supply card 19: count = 10, expected: count = 10
+supply card 20: count = -1, expected: count = -1
+supply card 21: count = 10, expected: count = 10
+supply card 22: count = 10, expected: count = 10
+supply card 23: count = -1, expected: count = -1
+supply card 24: count = -1, expected: count = -1
+supply card 25: count = 10, expected: count = 10
+supply card 26: count = -1, expected: count = -1
+----TEST 2: +3 cards, < 3 cards in deck----
+hand count = 8, expected = 7
+***FAILED ASSERTION: 8 == 7***
+deck count = 1, expected = 2
+***FAILED ASSERTION: 1 == 2***
+coins = 4, expected = 4
+actions = 1, expected = 1
+---Checking that no state change occurs for other player---
+other player's hand count = 0, expected = 0
+other player's deck count = 10, expected = 10
+other player's discard count = 0, expected = 0
+----Checking that no state change has occured for supply cards (curse, treasure, victory, and kingdom cards)---
+supply card 0: count = 10, expected: count = 10
+supply card 1: count = 8, expected: count = 8
+supply card 2: count = 8, expected: count = 8
+supply card 3: count = 8, expected: count = 8
+supply card 4: count = 46, expected: count = 46
+supply card 5: count = 40, expected: count = 40
+supply card 6: count = 30, expected: count = 30
+supply card 7: count = 10, expected: count = 10
+supply card 8: count = 10, expected: count = 10
+supply card 9: count = -1, expected: count = -1
+supply card 10: count = -1, expected: count = -1
+supply card 11: count = 10, expected: count = 10
+supply card 12: count = -1, expected: count = -1
+supply card 13: count = 10, expected: count = 10
+supply card 14: count = 10, expected: count = 10
+supply card 15: count = -1, expected: count = -1
+supply card 16: count = -1, expected: count = -1
+supply card 17: count = 10, expected: count = 10
+supply card 18: count = -1, expected: count = -1
+supply card 19: count = 10, expected: count = 10
+supply card 20: count = -1, expected: count = -1
+supply card 21: count = 10, expected: count = 10
+supply card 22: count = 10, expected: count = 10
+supply card 23: count = -1, expected: count = -1
+supply card 24: count = -1, expected: count = -1
+supply card 25: count = 10, expected: count = 10
+supply card 26: count = -1, expected: count = -1
+
+ >>>>> FAILED 4 ASSERTIONS: Testing complete smithy <<<<<
+
+File 'dominion.c'
+Lines executed:32.45% of 564
+Branches executed:33.98% of 415
+Taken at least once:25.06% of 415
+Calls executed:13.83% of 94
+Creating 'dominion.c.gcov'
+
+cardtest2.c:
+----------------- Testing Card: adventurer ----------------
+
+///// TEST 1: No shuffle required, discard 0 cards ///////////////
+hand count = 7, expected = 6
+***FAILED ASSERTION: 7 == 6***
+number of treasures in hand = 6, expected = 6
+deckCount + discardCount = 3 + 0, expected = 3
+played cards pile count = 0, expected = 1
+***FAILED ASSERTION: 0 == 1***
+coins = 4, expected = 4
+actions = 1, expected = 1
+---Checking that no state change occurs for other player---
+other player's hand count = 0, expected = 0
+other player's deck count = 10, expected = 10
+other player's discard count = 0, expected = 0
+----Checking that no state change has occured for supply cards (curse, treasure, victory, and kingdom cards)---
+supply card 0: count = 10, expected: count = 10
+supply card 1: count = 8, expected: count = 8
+supply card 2: count = 8, expected: count = 8
+supply card 3: count = 8, expected: count = 8
+supply card 4: count = 46, expected: count = 46
+supply card 5: count = 40, expected: count = 40
+supply card 6: count = 30, expected: count = 30
+supply card 7: count = 10, expected: count = 10
+supply card 8: count = 10, expected: count = 10
+supply card 9: count = -1, expected: count = -1
+supply card 10: count = -1, expected: count = -1
+supply card 11: count = 10, expected: count = 10
+supply card 12: count = -1, expected: count = -1
+supply card 13: count = 10, expected: count = 10
+supply card 14: count = 10, expected: count = 10
+supply card 15: count = -1, expected: count = -1
+supply card 16: count = -1, expected: count = -1
+supply card 17: count = 10, expected: count = 10
+supply card 18: count = -1, expected: count = -1
+supply card 19: count = 10, expected: count = 10
+supply card 20: count = -1, expected: count = -1
+supply card 21: count = 10, expected: count = 10
+supply card 22: count = 10, expected: count = 10
+supply card 23: count = -1, expected: count = -1
+supply card 24: count = -1, expected: count = -1
+supply card 25: count = 10, expected: count = 10
+supply card 26: count = -1, expected: count = -1
+
+///// TEST 2: No shuffle required, discard 1 card ///////////////
+hand count = 7, expected = 6
+***FAILED ASSERTION: 7 == 6***
+number of treasures in hand = 6, expected = 6
+deckCount + discardCount = 2 + 1, expected = 3
+played cards pile count = 0, expected = 1
+***FAILED ASSERTION: 0 == 1***
+coins = 4, expected = 4
+actions = 1, expected = 1
+---Checking that no state change occurs for other player---
+other player's hand count = 0, expected = 0
+other player's deck count = 10, expected = 10
+other player's discard count = 0, expected = 0
+----Checking that no state change has occured for supply cards (curse, treasure, victory, and kingdom cards)---
+supply card 0: count = 10, expected: count = 10
+supply card 1: count = 8, expected: count = 8
+supply card 2: count = 8, expected: count = 8
+supply card 3: count = 8, expected: count = 8
+supply card 4: count = 46, expected: count = 46
+supply card 5: count = 40, expected: count = 40
+supply card 6: count = 30, expected: count = 30
+supply card 7: count = 10, expected: count = 10
+supply card 8: count = 10, expected: count = 10
+supply card 9: count = -1, expected: count = -1
+supply card 10: count = -1, expected: count = -1
+supply card 11: count = 10, expected: count = 10
+supply card 12: count = -1, expected: count = -1
+supply card 13: count = 10, expected: count = 10
+supply card 14: count = 10, expected: count = 10
+supply card 15: count = -1, expected: count = -1
+supply card 16: count = -1, expected: count = -1
+supply card 17: count = 10, expected: count = 10
+supply card 18: count = -1, expected: count = -1
+supply card 19: count = 10, expected: count = 10
+supply card 20: count = -1, expected: count = -1
+supply card 21: count = 10, expected: count = 10
+supply card 22: count = 10, expected: count = 10
+supply card 23: count = -1, expected: count = -1
+supply card 24: count = -1, expected: count = -1
+supply card 25: count = 10, expected: count = 10
+supply card 26: count = -1, expected: count = -1
+
+///// TEST 3: No shuffle required, discard 3 cards ///////////////
+hand count = 7, expected = 6
+***FAILED ASSERTION: 7 == 6***
+number of treasures in hand = 6, expected = 6
+deckCount + discardCount = 0 + 3, expected = 3
+played cards pile count = 0, expected = 1
+***FAILED ASSERTION: 0 == 1***
+coins = 4, expected = 4
+actions = 1, expected = 1
+---Checking that no state change occurs for other player---
+other player's hand count = 0, expected = 0
+other player's deck count = 10, expected = 10
+other player's discard count = 0, expected = 0
+----Checking that no state change has occured for supply cards (curse, treasure, victory, and kingdom cards)---
+supply card 0: count = 10, expected: count = 10
+supply card 1: count = 8, expected: count = 8
+supply card 2: count = 8, expected: count = 8
+supply card 3: count = 8, expected: count = 8
+supply card 4: count = 46, expected: count = 46
+supply card 5: count = 40, expected: count = 40
+supply card 6: count = 30, expected: count = 30
+supply card 7: count = 10, expected: count = 10
+supply card 8: count = 10, expected: count = 10
+supply card 9: count = -1, expected: count = -1
+supply card 10: count = -1, expected: count = -1
+supply card 11: count = 10, expected: count = 10
+supply card 12: count = -1, expected: count = -1
+supply card 13: count = 10, expected: count = 10
+supply card 14: count = 10, expected: count = 10
+supply card 15: count = -1, expected: count = -1
+supply card 16: count = -1, expected: count = -1
+supply card 17: count = 10, expected: count = 10
+supply card 18: count = -1, expected: count = -1
+supply card 19: count = 10, expected: count = 10
+supply card 20: count = -1, expected: count = -1
+supply card 21: count = 10, expected: count = 10
+supply card 22: count = 10, expected: count = 10
+supply card 23: count = -1, expected: count = -1
+supply card 24: count = -1, expected: count = -1
+supply card 25: count = 10, expected: count = 10
+supply card 26: count = -1, expected: count = -1
+
+///// TEST 4: Shuffle required, no cards in deck. ///////////////
+hand count = 7, expected = 6
+***FAILED ASSERTION: 7 == 6***
+number of treasures in hand = 6, expected = 6
+deckCount + discardCount = 2 + 1, expected = 3
+played cards pile count = 0, expected = 1
+***FAILED ASSERTION: 0 == 1***
+coins = 4, expected = 4
+actions = 1, expected = 1
+---Checking that no state change occurs for other player---
+other player's hand count = 0, expected = 0
+other player's deck count = 10, expected = 10
+other player's discard count = 0, expected = 0
+----Checking that no state change has occured for supply cards (curse, treasure, victory, and kingdom cards)---
+supply card 0: count = 10, expected: count = 10
+supply card 1: count = 8, expected: count = 8
+supply card 2: count = 8, expected: count = 8
+supply card 3: count = 8, expected: count = 8
+supply card 4: count = 46, expected: count = 46
+supply card 5: count = 40, expected: count = 40
+supply card 6: count = 30, expected: count = 30
+supply card 7: count = 10, expected: count = 10
+supply card 8: count = 10, expected: count = 10
+supply card 9: count = -1, expected: count = -1
+supply card 10: count = -1, expected: count = -1
+supply card 11: count = 10, expected: count = 10
+supply card 12: count = -1, expected: count = -1
+supply card 13: count = 10, expected: count = 10
+supply card 14: count = 10, expected: count = 10
+supply card 15: count = -1, expected: count = -1
+supply card 16: count = -1, expected: count = -1
+supply card 17: count = 10, expected: count = 10
+supply card 18: count = -1, expected: count = -1
+supply card 19: count = 10, expected: count = 10
+supply card 20: count = -1, expected: count = -1
+supply card 21: count = 10, expected: count = 10
+supply card 22: count = 10, expected: count = 10
+supply card 23: count = -1, expected: count = -1
+supply card 24: count = -1, expected: count = -1
+supply card 25: count = 10, expected: count = 10
+supply card 26: count = -1, expected: count = -1
+
+///// TEST 5: Shuffle required, 1 treasure card in deck. ///////////////
+hand count = 7, expected = 6
+***FAILED ASSERTION: 7 == 6***
+number of treasures in hand = 5, expected = 5
+deckCount + discardCount = 3 + 0, expected = 3
+played cards pile count = 0, expected = 1
+***FAILED ASSERTION: 0 == 1***
+coins = 4, expected = 4
+actions = 1, expected = 1
+---Checking that no state change occurs for other player---
+other player's hand count = 0, expected = 0
+other player's deck count = 10, expected = 10
+other player's discard count = 0, expected = 0
+----Checking that no state change has occured for supply cards (curse, treasure, victory, and kingdom cards)---
+supply card 0: count = 10, expected: count = 10
+supply card 1: count = 8, expected: count = 8
+supply card 2: count = 8, expected: count = 8
+supply card 3: count = 8, expected: count = 8
+supply card 4: count = 46, expected: count = 46
+supply card 5: count = 40, expected: count = 40
+supply card 6: count = 30, expected: count = 30
+supply card 7: count = 10, expected: count = 10
+supply card 8: count = 10, expected: count = 10
+supply card 9: count = -1, expected: count = -1
+supply card 10: count = -1, expected: count = -1
+supply card 11: count = 10, expected: count = 10
+supply card 12: count = -1, expected: count = -1
+supply card 13: count = 10, expected: count = 10
+supply card 14: count = 10, expected: count = 10
+supply card 15: count = -1, expected: count = -1
+supply card 16: count = -1, expected: count = -1
+supply card 17: count = 10, expected: count = 10
+supply card 18: count = -1, expected: count = -1
+supply card 19: count = 10, expected: count = 10
+supply card 20: count = -1, expected: count = -1
+supply card 21: count = 10, expected: count = 10
+supply card 22: count = 10, expected: count = 10
+supply card 23: count = -1, expected: count = -1
+supply card 24: count = -1, expected: count = -1
+supply card 25: count = 10, expected: count = 10
+supply card 26: count = -1, expected: count = -1
+
+ >>>>> FAILED 10 ASSERTIONS: Testing complete adventurer <<<<<
+
+File 'dominion.c'
+Lines executed:35.99% of 564
+Branches executed:36.39% of 415
+Taken at least once:27.95% of 415
+Calls executed:17.02% of 94
+Creating 'dominion.c.gcov'
+
+cardtest3.c:
+----------------- Testing Card: village ----------------
+
+----TEST 1: +1 card, +2 actions, >= 1 card in deck-----
+hand count = 5, expected = 5
+deck count = 4, expected = 4
+coins = 4, expected = 4
+actions = 3, expected = 3
+---Checking that no state change occurs for other player---
+other player's hand count = 0, expected = 0
+other player's deck count = 10, expected = 10
+other player's discard count = 0, expected = 0
+----Checking that no state change has occured for supply cards (curse, treasure, victory, and kingdom cards)---
+supply card 0: count = 10, expected: count = 10
+supply card 1: count = 8, expected: count = 8
+supply card 2: count = 8, expected: count = 8
+supply card 3: count = 8, expected: count = 8
+supply card 4: count = 46, expected: count = 46
+supply card 5: count = 40, expected: count = 40
+supply card 6: count = 30, expected: count = 30
+supply card 7: count = 10, expected: count = 10
+supply card 8: count = 10, expected: count = 10
+supply card 9: count = -1, expected: count = -1
+supply card 10: count = -1, expected: count = -1
+supply card 11: count = 10, expected: count = 10
+supply card 12: count = -1, expected: count = -1
+supply card 13: count = 10, expected: count = 10
+supply card 14: count = 10, expected: count = 10
+supply card 15: count = -1, expected: count = -1
+supply card 16: count = -1, expected: count = -1
+supply card 17: count = 10, expected: count = 10
+supply card 18: count = -1, expected: count = -1
+supply card 19: count = 10, expected: count = 10
+supply card 20: count = -1, expected: count = -1
+supply card 21: count = 10, expected: count = 10
+supply card 22: count = 10, expected: count = 10
+supply card 23: count = -1, expected: count = -1
+supply card 24: count = -1, expected: count = -1
+supply card 25: count = 10, expected: count = 10
+supply card 26: count = -1, expected: count = -1
+
+-----TEST 2: +1 card, +2 actions, 0 card in deck----
+hand count = 5, expected = 5
+deck count = 4, expected = 4
+coins = 4, expected = 4
+actions = 3, expected = 3
+---Checking that no state change occurs for other player---
+other player's hand count = 0, expected = 0
+other player's deck count = 10, expected = 10
+other player's discard count = 0, expected = 0
+----Checking that no state change has occured for supply cards (curse, treasure, victory, and kingdom cards)---
+supply card 0: count = 10, expected: count = 10
+supply card 1: count = 8, expected: count = 8
+supply card 2: count = 8, expected: count = 8
+supply card 3: count = 8, expected: count = 8
+supply card 4: count = 46, expected: count = 46
+supply card 5: count = 40, expected: count = 40
+supply card 6: count = 30, expected: count = 30
+supply card 7: count = 10, expected: count = 10
+supply card 8: count = 10, expected: count = 10
+supply card 9: count = -1, expected: count = -1
+supply card 10: count = -1, expected: count = -1
+supply card 11: count = 10, expected: count = 10
+supply card 12: count = -1, expected: count = -1
+supply card 13: count = 10, expected: count = 10
+supply card 14: count = 10, expected: count = 10
+supply card 15: count = -1, expected: count = -1
+supply card 16: count = -1, expected: count = -1
+supply card 17: count = 10, expected: count = 10
+supply card 18: count = -1, expected: count = -1
+supply card 19: count = 10, expected: count = 10
+supply card 20: count = -1, expected: count = -1
+supply card 21: count = 10, expected: count = 10
+supply card 22: count = 10, expected: count = 10
+supply card 23: count = -1, expected: count = -1
+supply card 24: count = -1, expected: count = -1
+supply card 25: count = 10, expected: count = 10
+supply card 26: count = -1, expected: count = -1
+
+ >>>>> SUCCESS: Testing complete village <<<<<
+
+File 'dominion.c'
+Lines executed:36.70% of 564
+Branches executed:36.39% of 415
+Taken at least once:28.19% of 415
+Calls executed:19.15% of 94
+Creating 'dominion.c.gcov'
+
+cardtest4.c:
+----------------- Testing Card: great_hall ----------------
+
+----TEST 1: +1 card, +1 action, >= 1 card in deck----
+hand count = 4, expected = 5
+***FAILED ASSERTION: 4 == 5***
+deck count = 5, expected = 4
+***FAILED ASSERTION: 5 == 4***
+coins = 4, expected = 4
+actions = 2, expected = 2
+---Checking that no state change occurs for other player---
+other player's hand count = 0, expected = 0
+other player's deck count = 10, expected = 10
+other player's discard count = 0, expected = 0
+----Checking that no state change has occured for supply cards (curse, treasure, victory, and kingdom cards)---
+supply card 0: count = 10, expected: count = 10
+supply card 1: count = 8, expected: count = 8
+supply card 2: count = 8, expected: count = 8
+supply card 3: count = 8, expected: count = 8
+supply card 4: count = 46, expected: count = 46
+supply card 5: count = 40, expected: count = 40
+supply card 6: count = 30, expected: count = 30
+supply card 7: count = 10, expected: count = 10
+supply card 8: count = 10, expected: count = 10
+supply card 9: count = -1, expected: count = -1
+supply card 10: count = -1, expected: count = -1
+supply card 11: count = 10, expected: count = 10
+supply card 12: count = -1, expected: count = -1
+supply card 13: count = 10, expected: count = 10
+supply card 14: count = 10, expected: count = 10
+supply card 15: count = -1, expected: count = -1
+supply card 16: count = -1, expected: count = -1
+supply card 17: count = -1, expected: count = -1
+supply card 18: count = -1, expected: count = -1
+supply card 19: count = 10, expected: count = 10
+supply card 20: count = -1, expected: count = -1
+supply card 21: count = 10, expected: count = 10
+supply card 22: count = 10, expected: count = 10
+supply card 23: count = -1, expected: count = -1
+supply card 24: count = -1, expected: count = -1
+supply card 25: count = 10, expected: count = 10
+supply card 26: count = 10, expected: count = 10
+
+----TEST 2: +1 card, +1 action, 0 card in deck----
+hand count = 4, expected = 5
+***FAILED ASSERTION: 4 == 5***
+deck count = 0, expected = 4
+***FAILED ASSERTION: 0 == 4***
+coins = 4, expected = 4
+actions = 2, expected = 2
+---Checking that no state change occurs for other player---
+other player's hand count = 0, expected = 0
+other player's deck count = 10, expected = 10
+other player's discard count = 0, expected = 0
+----Checking that no state change has occured for supply cards (curse, treasure, victory, and kingdom cards)---
+supply card 0: count = 10, expected: count = 10
+supply card 1: count = 8, expected: count = 8
+supply card 2: count = 8, expected: count = 8
+supply card 3: count = 8, expected: count = 8
+supply card 4: count = 46, expected: count = 46
+supply card 5: count = 40, expected: count = 40
+supply card 6: count = 30, expected: count = 30
+supply card 7: count = 10, expected: count = 10
+supply card 8: count = 10, expected: count = 10
+supply card 9: count = -1, expected: count = -1
+supply card 10: count = -1, expected: count = -1
+supply card 11: count = 10, expected: count = 10
+supply card 12: count = -1, expected: count = -1
+supply card 13: count = 10, expected: count = 10
+supply card 14: count = 10, expected: count = 10
+supply card 15: count = -1, expected: count = -1
+supply card 16: count = -1, expected: count = -1
+supply card 17: count = -1, expected: count = -1
+supply card 18: count = -1, expected: count = -1
+supply card 19: count = 10, expected: count = 10
+supply card 20: count = -1, expected: count = -1
+supply card 21: count = 10, expected: count = 10
+supply card 22: count = 10, expected: count = 10
+supply card 23: count = -1, expected: count = -1
+supply card 24: count = -1, expected: count = -1
+supply card 25: count = 10, expected: count = 10
+supply card 26: count = 10, expected: count = 10
+
+ >>>>> FAILED 4 ASSERTIONS: Testing complete great_hall <<<<<
+
+File 'dominion.c'
+Lines executed:37.77% of 564
+Branches executed:36.39% of 415
+Taken at least once:28.43% of 415
+Calls executed:21.28% of 94
+Creating 'dominion.c.gcov'
+

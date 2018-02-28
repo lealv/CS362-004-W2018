@@ -1,0 +1,17 @@
+randomtestcard2.c:
+----------------- Testing Card: village ----------------
+FAILURE: hand count = -1, expected = 0
+FAILURE: deck count = 0, expected = -1
+FAILURE: other player's hand changed: hand[otherPlayer][499] = -1, expected = 82146127
+FAILURE: Test #5001: deckCount = 0 / discardCount = 0 / handCount = 0 / playedCardCount = 0
+
+
+ >>>>> FAILED 1 TESTS out of 5001 (seed = 100): Testing complete village <<<<<
+
+File 'dominion.c'
+Lines executed:38.30% of 564
+Branches executed:36.39% of 415
+Taken at least once:29.16% of 415
+Calls executed:21.28% of 94
+Creating 'dominion.c.gcov'
+
